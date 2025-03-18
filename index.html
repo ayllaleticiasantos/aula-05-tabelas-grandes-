@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Grandes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            /* Obrigatório para ter o título da tabela fixo */
+            position: relative;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead,
+        tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead>tr>th {
+            /* No título da linha do cabeçalho vou grudar "sticky" */
+            position: sticky;
+            /* grudar */
+            top: 0;
+            /* na posição 0 */
+            background-color: gray;
+
+        }
+
+        caption {
+            /* Tamanho da fonte */
+            font-size: 1.5em;
+            /* Para colocar em negrito */
+            font-weight: bold;
+            /* Para deixar mais espaçado */
+            padding: 10px;
+            /* Colocar um fundo no meu caption */
+            background-color: lightgray;
+
+        }
+
+        /* Efeito Zebra
+            tdoby > tr - Todo tr que é filho do tdoby
+            pseudo-classe tr:nth-child(2n) - Todo filho atualizando no intervalo de 2 linhas.
+            Outros exemplos:
+            3n - de 3 em 3 linhas;
+            2n-1 - Vai iniciar na primeira linha;
+            odd - Linhas impares;
+            even - Linhas pares;
+
+            Posso também personalisar somente as pares ou impares.
+
+            tbody > tr:nth-child(odd) {
+                background-color: blue;
+            }
+                
+            tbody > tr:nth-child(even) {
+                background-color: yellow;
+            }
+        */
+        /*tbody>tr:nth-child(2n) {
+            background-color: gray;
+
+        }*/
+    </style>
+</head>
+
+<body>
+    <h1 align="center">TABELAS GRANDES EXERCÍCIO</h1>
+    <table align="center" width="50px">
+        <caption>
+            População dos Estados Brasileiros - 2024
+        </caption>
+        <thead>
+            <th>Estado</th>
+            <th>População</th>
+            <th>Comando HTML Utilizado</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Acre</b></td>
+                <td cass="num"><mark>830,018</mark></td>
+                <td>'<b>Negrito</b>' e '<mark>Destacado</mark>'</td>
+            </tr>
+            <tr>
+                <td><i>Alagoas</i></td>
+                <td cass="num">3.365.351</td>
+                <td>'<i>Itálico</i>'</td>
+            </tr>
+            <tr>
+                <td><u>Amapá</u></td>
+                <td cass="num">877.613</td>
+                <td>'<u>Texto Sublinhado</u>'</td>
+            </tr>
+            <tr>
+                <td><s>Amazonas</s></td>
+                <td cass="num"><s>4.269.995</s></td>
+                <td>'<s>Texto Riscado</s>'e '<s>Texto Sublinhado</s>'</td>
+            </tr>
+            <tr>
+                <td><sub>Bahia</sub></td>
+                <td cass="num">14.141.626</td>
+                <td>'<sub>Texto sobrescrito</sub>'</td>
+            </tr>
+            <tr>
+                <td><abbr title="Ceará">CE</abbr></td>
+                <td cass="num">9.240.580</td>
+                <td>'Abreviação'</td>
+            </tr>---
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
